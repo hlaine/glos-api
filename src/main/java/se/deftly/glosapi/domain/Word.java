@@ -1,7 +1,6 @@
 package se.deftly.glosapi.domain;
 
 import lombok.Data;
-import lombok.Value;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
