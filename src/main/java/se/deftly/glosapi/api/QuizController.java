@@ -11,7 +11,7 @@ import se.deftly.glosapi.domain.Word;
 import se.deftly.glosapi.service.VerbService;
 import se.deftly.glosapi.service.WordService;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://deftly.se")
 @RestController
 public class QuizController {
 
