@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import se.deftly.glosapi.domain.Word;
 import se.deftly.glosapi.domain.WordRepository;
 
@@ -37,6 +38,7 @@ public class WordService {
                 .collect(Collectors.toList());
     }
 
+    @Transactional(readOnly = true)
     @Cacheable("all-words")
     public List<Word> getAllWords() {
         return wordRepository.findAll();
